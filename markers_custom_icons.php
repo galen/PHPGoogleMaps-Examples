@@ -9,9 +9,7 @@ $relevant_code = array(
 );
 
 // Autoloader stuff
-require( '../PHPGoogleMaps/Core/Autoloader.php' );
-$map_loader = new SplClassLoader('PHPGoogleMaps', '../');
-$map_loader->register();
+require( '_system/autoload.php' );
 
 $map = new \PHPGoogleMaps\Map;
 
@@ -23,8 +21,8 @@ $marker1_options = array(
 $marker1 = \PHPGoogleMaps\Overlay\Marker::createFromLocation( 'New York, NY', $marker1_options );
 
 // Create a marker icon or the icon and shadow
-$icon1 = new \PHPGoogleMaps\Overlay\MarkerIcon( 'http://www.galengrover.com/projects/php-google-maps/examples/_images/yellow_marker.png' );
-$shadow1 = new \PHPGoogleMaps\Overlay\MarkerIcon( 'http://www.galengrover.com/projects/php-google-maps/examples/_images/yellow_marker_shadow.png' );
+$icon1 = new \PHPGoogleMaps\Overlay\MarkerIcon( '_images/yellow_marker.png' );
+$shadow1 = new \PHPGoogleMaps\Overlay\MarkerIcon( '_images/yellow_marker_shadow.png' );
 
 // Set the x anchor point to 11
 // y anchor point defaults to image height
@@ -41,7 +39,7 @@ $marker2_options = array(
 $marker2 = \PHPGoogleMaps\Overlay\Marker::createFromLocation( 'New Haven, CT', $marker2_options );
 
 // This one will use a sprite for the icon and shadow
-$icon2 = \PHPGoogleMaps\Overlay\MarkerIcon::create( 'http://www.galengrover.com/projects/php-google-maps/examples/_images/purple_marker_sprite.png', array( 'height' => 34 ) );
+$icon2 = \PHPGoogleMaps\Overlay\MarkerIcon::create( '_images/purple_marker_sprite.png', array( 'height' => 34 ) );
 
 // Height and width default to size of the image
 $shadow2_options = array(
@@ -53,7 +51,7 @@ $shadow2_options = array(
 );
 
 // Create another icon from the same image
-$shadow2 = new \PHPGoogleMaps\Overlay\MarkerIcon( 'http://www.galengrover.com/projects/php-google-maps/examples/_images/purple_marker_sprite.png', $shadow2_options );
+$shadow2 = new \PHPGoogleMaps\Overlay\MarkerIcon( '_images/purple_marker_sprite.png', $shadow2_options );
 
 // Attach the icon and shadow to the second marker
 $marker2->setIcon( $icon2 )->setShadow( $shadow2 );

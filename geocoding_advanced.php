@@ -10,9 +10,7 @@ $relevant_code = array(
 );
 
 // Autoloader stuff
-require( '../PHPGoogleMaps/Core/Autoloader.php' );
-$map_loader = new SplClassLoader('PHPGoogleMaps', '../');
-$map_loader->register();
+require( '_system/autoload.php' );
 
 // If a location is set, geocode it
 if ( isset( $_GET['location'] ) && strlen( $_GET['location'] ) ) {

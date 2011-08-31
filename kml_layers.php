@@ -8,9 +8,7 @@ $relevant_code = array(
 );
 
 // Autoload stuff
-require( '../PHPGoogleMaps/Core/Autoloader.php' );
-$map_loader = new SplClassLoader('PHPGoogleMaps', '../');
-$map_loader->register();
+require( '_system/autoload.php' );
 
 $map = new \PHPGoogleMaps\Map;
 $kml = new \PHPGoogleMaps\Layer\KmlLayer( 'http://local.yahooapis.com/MapsService/rss/trafficData.xml?appid=YahooDemo&city=new+york' );

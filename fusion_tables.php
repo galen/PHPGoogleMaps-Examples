@@ -1,9 +1,7 @@
 <?php
 
 // Autoloader stuff
-require( '../PHPGoogleMaps/Core/Autoloader.php' );
-$map_loader = new SplClassLoader('PHPGoogleMaps', '../');
-$map_loader->register();
+require( '_system/autoload.php' );
 
 // This is just for my examples
 require( '_system/config.php' );

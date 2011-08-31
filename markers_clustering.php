@@ -8,9 +8,7 @@ $relevant_code = array(
 );
 
 // Autoloader stuff
-require( '../PHPGoogleMaps/Core/Autoloader.php' );
-$map_loader = new SplClassLoader('PHPGoogleMaps', '../');
-$map_loader->register();
+require( '_system/autoload.php' );
 
 $map = new \PHPGoogleMaps\Map;
 $map->setWidth( 800 );
@@ -34,7 +32,7 @@ $cluster_options = array(
 	'maxZoom' => 10,
 	'gridSize' => null
 );
-$map->enableClustering( 'http://www.galengrover.com/projects/php-google-maps/examples/_js/markerclusterer.js', $cluster_options );
+$map->enableClustering( '_js/markerclusterer.js', $cluster_options );
 ?>
 
 <!DOCTYPE html>

@@ -8,9 +8,7 @@ $relevant_code = array(
 );
 
 // Autoload stuff
-require( '../PHPGoogleMaps/Core/Autoloader.php' );
-$map_loader = new SplClassLoader('PHPGoogleMaps', '../');
-$map_loader->register();
+require( '_system/autoload.php' );
 
 
 $map = new \PHPGoogleMaps\Map;
@@ -41,7 +39,7 @@ foreach( $locations as $i => $location ) {
 			'content' => "$location marker"
 		)
 	);
-	$marker->setIcon( sprintf( "http://www.galengrover.com/projects/php-google-maps/examples/_images/blue%s.png", chr( $i++ + 65 ) ) );
+	$marker->setIcon( sprintf( "_images/blue%s.png", chr( $i++ + 65 ) ) );
 	$map->addObject( $marker );
 }
 

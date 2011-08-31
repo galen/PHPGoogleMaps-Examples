@@ -4,9 +4,7 @@
 require( '_system/config.php' );
 
 // Autoload stuff
-require( '../PHPGoogleMaps/Core/Autoloader.php' );
-$map_loader = new SplClassLoader('PHPGoogleMaps', '../');
-$map_loader->register();
+require( '_system/autoload.php' );
 
 $map_options = array(
 	'map_id'		=> 'map23',

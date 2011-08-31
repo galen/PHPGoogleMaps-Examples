@@ -11,9 +11,7 @@ $relevant_code = array(
 );
 
 // Autoloader stuff
-require( '../PHPGoogleMaps/Core/Autoloader.php' );
-$map_loader = new SplClassLoader('PHPGoogleMaps', '../');
-$map_loader->register();
+require( '_system/autoload.php' );
 
 // Create a new map and set some options
 $map = new \PHPGoogleMaps\Map;
