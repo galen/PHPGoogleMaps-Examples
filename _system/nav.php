@@ -6,7 +6,7 @@
 		Relevant Code:
 		<ul>
 			<?php foreach( $relevant_code as $code ): ?>
-			<li><a href="<?php echo GITHUB_CODE_URL ?><?php echo ltrim( str_replace( '\\', '/', $code ), '/' ) ?>.php"><?php echo end( explode( '\\', $code ) ) ?></a></li>	
+			<li><a href="<?php echo GITHUB_CODE_URL ?><?php echo ltrim( str_replace( 'PHPGoogleMaps/','', str_replace( '\\', '/', $code )), '/' ) ?>.php"><?php echo end( explode( '\\', $code ) ) ?></a></li>	
 			<?php endforeach; ?>
 		</ul>
 	</li>
