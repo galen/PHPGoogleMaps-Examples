@@ -21,7 +21,7 @@ $map->enableInfoWindows();
 <body>
 
 <h1>Places</h1>
-
+<p>You must write your own listener for the 'place_changed' event.</p>
 <script type="text/javascript">
 google.maps.event.addDomListener(window, "load", 
 
